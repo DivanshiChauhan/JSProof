@@ -1,0 +1,38 @@
+const NFTs=[];
+
+function mintNFT (name,gender,eye_color,shirt_type,bling) {
+const NFT = {
+    "Name":name ,
+    "Gender":gender ,
+    "Eye_Color":eye_color,
+    "Shirt_Type":shirt_type,
+    "Bling":bling
+};
+NFTs.push(NFT);
+console.log("\nMinted NFT of Name : "+name);
+}
+
+function listNFTs () {
+for(let i=0 ; i<NFTs.length ; i++){
+    console.log("\n\nMetadata for NFT of : "+NFTs[i].Name);
+    console.log("\nName : "+NFTs[i].Name);
+    console.log("\nGender : "+NFTs[i].Gender);
+    console.log("\nEye Color : "+NFTs[i].Eye_Color);
+    console.log("\nShirt Type : "+NFTs[i].Shirt_Type);
+    console.log("\nBling : "+NFTs[i].Bling);
+}
+}
+
+function getTotalSupply() {
+console.log("\n\nNumber of NFTs minted are : "+ NFTs.length);
+}
+
+mintNFT("Alex","Male","Blue","T-Shirt","Diamond Encrusted Crown");
+mintNFT("Maya","Female","Brown","Shirt","Golden Chain Necklace");
+mintNFT("Liam","Female","Green","Hoodie","Sapphire-studded Bracelet");
+mintNFT("Sophia","Female","Black","Sweater","Emerald-encrusted Ring");
+mintNFT("Issac","Male","Emerald","Jacket","Silver Ankh Pendant");
+
+listNFTs();
+
+getTotalSupply();
